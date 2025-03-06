@@ -24,41 +24,52 @@ Testing the commands for the desired output.
 ### Create the following files file1, file2 as follows:
 cat > file1
 ```
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
-^d
+apple
+mango
+orange
+grapes
+kiwi
+^C
 ```
 cat > file2
 ```
-anil aggarwal
-barun sengupta
-c.k. shukla
-lalit chowdury
-s.n. dasgupta
-^d
+guava
+mango
+orange
+banana
+dates
+^C
 ```
 ### Display the content of the files
 cat < file1
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/8a6bc3b6-26c2-452a-b199-45d08b850912)
+
 
 
 
 cat < file2
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/74bcb7a8-1e15-4b5c-a232-2a195c949bee)
+
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/43ab4c20-5e45-4cdd-8065-d17834eb0cf3)
+
  
 comm file1 file2
  ## OUTPUT
+ ![image](https://github.com/user-attachments/assets/e88bd2ce-22b7-4646-aec0-4dbe6ad2d481)
+
 
  
 diff file1 file2
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/44d608bc-3601-4a2b-a8ab-d4a1d35216e5)
+
 
 
 #Filters
@@ -67,39 +78,43 @@ diff file1 file2
 
 cat > file11
 ```
-Hello world
-This is my world
-^d
+Manza Meow
+This is Operating System
+^C
 ```
 cat > file22
 ```
-1001 | Ram | 10000 | HR
-1002 | tom |  5000 | Admin
-1003 | Joe |  7000 | Developer
-^d
+01|manu|2006|dec
+02|kavi|2005|dec
+03|kitu|2006|dec
+^C
 ```
 
 
 cut -c1-3 file11
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/52764ab2-e0cc-432c-a8ac-09add23c532c)
 
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/c43141fb-8739-4a82-9724-15f84f970af3)
 
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/e6f25643-3486-476d-be89-9c923604c8e0)
+
 
 
 cat < newfile 
 ```
 Hello world
 hello world
-^d
+^C
 ````
 cat > newfile 
 Hello world
@@ -107,39 +122,50 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/f191c99a-1cb0-4d0c-a02b-59f46f438341)
+
 
 
 
 grep hello newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b89fb482-eefe-4bb3-9d4d-7bd16ead8910)
+
 
 
 
 
 grep -v hello newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/5d28b5b6-69fe-48c1-95f1-0ec0b6f39b84)
 
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/63850c21-eb54-48df-ab92-8d3157571f9c)
+
 
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b1fe52f7-eedb-416a-9f52-18e8d0f11670)
+
 
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/a4a32a40-0c05-40f5-ab01-5c57196e80d6)
 
 
 
 grep -w -n world newfile   
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/d645561a-0736-47c4-becb-d64de18cb3f9)
 
 
 cat < newfile 
@@ -149,7 +175,7 @@ hello world
 Linux is world number 1
 Unix is predecessor
 Linux is best in this World
-^d
+^C
 ```
 
 cat > newfile
@@ -163,59 +189,76 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/109bedf6-b64c-44ab-ba8f-86b181df6125)
 
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/5c051145-17ae-42d5-b356-b60df8bcfafe)
 
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b7f73bd6-231a-476e-98f0-07969322d460)
 
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/5862ee08-a9a7-4671-8b73-66329b6f23c0)
+
 
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/7a677be8-cce2-49fb-b87a-8d17f787827f)
+
 
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/701aa0e4-7738-493d-8e8a-af9d6bc0e7c1)
 
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b86d14a4-e327-4d67-a2c1-7b03585a235b)
 
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/fb24c6c4-f97f-4745-ab18-adb9fb4115c4)
 
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/780989e5-99e0-460f-bff7-814829cf3e53)
+
+
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/3e323af7-94e4-4fb8-a4d9-aadc19033a73)
+
 
 
 egrep l{2} newfile
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/8c652943-da81-4348-ac11-9e9ec99bbafa)
 
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+![image](https://github.com/user-attachments/assets/b6de79dc-476f-4100-b263-8085b19959bb)
 
 
 cat > file23
@@ -228,7 +271,7 @@ cat > file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-^d
+^C
 ```
 
 
